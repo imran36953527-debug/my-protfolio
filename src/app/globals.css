@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FAF8F5;
+  --foreground: #18191D;
+  --card-bg: #FFFFFF;
+  --card-border: #E8E4DA;
+  --yellow-accent: #F59E0B;
+  --yellow-light: #FEF3C7;
+  --yellow-gold: #D97706;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  overflow-x: hidden;
+  letter-spacing: -0.01em;
+  background-image: 
+    radial-gradient(circle at 15% 15%, rgba(245, 158, 11, 0.04) 0%, transparent 40%),
+    radial-gradient(circle at 85% 85%, rgba(234, 179, 8, 0.05) 0%, transparent 50%);
+  background-attachment: fixed;
+}
+
+/* Custom delicate yellow/amber scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: #F3EFE6;
+}
+::-webkit-scrollbar-thumb {
+  background: #E4D8B8;
+  border-radius: 9999px;
+  border: 2px solid #F3EFE6;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D97706;
+}
+
+/* Selection highlight in warm gold */
+::selection {
+  background-color: #FDE68A;
+  color: #1F2937;
+}
+
+/* Glassmorphic light card styling */
+.glass-card {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(232, 228, 218, 0.85);
+}
+
+/* Clean subtle hover shadow */
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 35px -10px rgba(180, 140, 50, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.03);
+}
+
+/* Editorial badge */
+.badge-yellow {
+  background-color: #FEF9C3;
+  color: #854D0E;
+  border: 1px solid #FDE047;
+}
